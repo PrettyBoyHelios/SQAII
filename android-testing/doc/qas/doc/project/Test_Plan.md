@@ -33,4 +33,8 @@ much to generalize and create an optimized framework.
 This project will focus black box testing, evaluating only the outcome of a given process. The testing suite will provide both **system** and **regression** testing to the Android core app development. As the testing framework will provide a comprehensive way of testing the work of all the components of an app, and to guarantee the app's behaviour on every release.  
 
 ## Exit Criteria
-For a release to be approved and deployed, the following conditions must be met.
+For a release to be approved and deployed, the following conditions must be met.  
+* The targeted version must pass 97% of the planned test cases.
+* All bugs in the released have been identified, analyzed and documented.
+* The Project's Lead Developer & Tester have agreed the found bugs do not represent a risk for the platforms overall functionality or credibility.
+* All changes have been documented and all reasonable Test Suites have been run to validate the current build.
