@@ -3,7 +3,9 @@ May 20th, 2020
 SDET: *Luis Enrique Correa Morán*
 
 ## Table of Contents
-
+1. [Project Definition](#project-definition)
+2. [Scope](#scope)
+3. [Testing Levels](#testing-levels)
 ## Project Definition
 Android Testing Suite is a Software Development that aims to create an in-house testing suite for some of Android's most important modules.
 The testing suite is expected to guarantee the correct app behaviour for the Phone, Calculator and Settings apps. It is expected for the framework to be highly optimized, flexible and scalable to accommodate for a variety of different modules (or Apps) in the future.
@@ -38,3 +40,5 @@ For a release to be approved and deployed, the following conditions must be met.
 * All bugs in the released have been identified, analyzed and documented.
 * The Project's Lead Developer & Tester have agreed the found bugs do not represent a risk for the platforms overall functionality or credibility.
 * All changes have been documented and all reasonable Test Suites have been run to validate the current build.
+
+## Risk Analysis
