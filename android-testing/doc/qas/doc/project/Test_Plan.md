@@ -30,9 +30,7 @@ their 'Vanilla' version, what's often described as Pure Android versions of the 
 much to generalize and create an optimized framework.
 
 ## Testing Levels
-This project will focus black box testing, evaluating only the outcome of a given process. The testing suite will
-provide both **system** and **regression** testing to the Android core app development. As the testing framework will provide a comprehensive 
-way of testing the work of all the components of an app, and to guarantee the app's behaviour on every release.  
+This project will focus black box testing, evaluating only the outcome of a given process. The testing suite will provide both **system** and **regression** testing to the Android core app development. As the testing framework will provide a comprehensive way of testing the work of all the components of an app, and to guarantee the app's behaviour on every release.  
 
 ## Exit Criteria
 For a release to be approved and deployed, the following conditions must be met.
