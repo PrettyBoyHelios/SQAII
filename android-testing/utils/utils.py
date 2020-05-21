@@ -123,7 +123,7 @@ class PhoneUtils:
         UIAutomator, using the specified device.
         """
         if use_adb:
-            check_call(
+            call(
                 ['adb', '-s', serial, 'shell', 'am', 'start',
                  '-a', 'android.intent.action.CALL', '-d',
                  'tel:' + str(number)
@@ -135,12 +135,12 @@ class PhoneUtils:
                 .click()
             for digit in number:
                 PhoneUtils.click_dial_number(device, digit)
-                Utils.wait_short()
+                # Utils.wait_short()
             device(
                 resourceId="com.google.android.dialer:id"
                            "/dialpad_voice_call_button") \
                 .click()
-            Utils.wait_normal(True)
+            Utils.wait_normal()
 
     @staticmethod
     def click_dial_number(device, digit):
@@ -200,11 +200,15 @@ class PhoneUtils:
                            className="android.widget.Button") \
                         .click()
                     raise CallFailed("network not available")
+                elif device(text="OK") \
+                        .exists:
+                    device(text="OK").click()
+                    raise CallFailed("option not available")
                 else:
                     device(
-                        resourceId="com.google.android.dialer:id/incall_end_call") \
-                        .click()
-                Utils.wait_normal()
+                        resourceId="com.google.android.dialer:id"
+                                   "/incall_end_call").click()
+                Utils.wait_short()
                 return True, None
             except Exception as e:
                 return False, e

@@ -24,25 +24,25 @@ class DeviceUnit:
 
 
 class DeviceManager:
-    def __init__(self, *args):
-        # type: (*int) -> None
+    def __init__(self, devices):
+        # type: (int) -> None
         """Creates device Manager, object that handles a UIAutomator
-        Device and Serial.
+        Device and Serial for several devices.
 
-        index: the index a device appears in when running the bash command
-        'adb devices'. If none is set, program will use the first device.
+        devices: the amount of devices to add to run asynchronously. If no
+        such devices are available trough adb they will be skipped.
         """
         self.devices = list()
         try:
             output = check_output(['adb', 'devices'])
             lines = output.splitlines()
-            for index in args:
+            for index in range(devices):
                 try:
-                    serial = lines[index].split()[0]
+                    serial = lines[index+1].split()[0]
+                    self.devices.append(DeviceUnit(Device(serial), serial))
                 except Exception as e:
                     print "Could not add device because: " + str(e)
                     continue
-                self.devices.append(DeviceUnit(Device(serial), serial))
         except Exception as e:
             print "can't find desired device: " + str(e)
 
