@@ -84,19 +84,30 @@ class CalculatorUtils:
         device(resourceId=button).click()
 
     @staticmethod
-    def get_result(device):
-        # type: (Device) -> str
+    def get_result(device, expected):
+        # type: (Device, bool) -> str
         """
-        Retrieves the calculator's result and replaces unicode characters that do not match.
+        Retrieves the calculator's result and replaces unicode characters that
+        do not match.
         :param device: device: device to perform the input in.
+        :param expected: boolean describing if the expression is expected to
+        return a value.
         :return: string with the result's content.
         """
-        device(resourceId="com.google.android.calculator:id/eq").click()
-        res = device(
-            resourceId="com.google.android.calculator:id/result_final") \
-            .info['text']
-        res = res.replace(u'\u2212', '-')
-        return res
+        if expected:
+            device(resourceId="com.google.android.calculator:id/eq").click()
+            res = device(
+                resourceId="com.google.android.calculator:id/result_final") \
+                .info['text']
+            res = res.replace(u'\u2212', '-')
+            return res
+        else:
+            device(resourceId="com.google.android.calculator:id/eq").click()
+            res = device(
+                resourceId="com.google.android.calculator:id/formula") \
+                .info['text']
+            res = res.replace(u'\u2212', '-')
+            return res
 
 
 class PhoneUtils:

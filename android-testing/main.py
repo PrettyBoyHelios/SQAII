@@ -19,12 +19,13 @@ if __name__ == "__main__":
                         default=True, action="store_true",
                         help='adds all the available test suites to the '
                              'current run.')
+    parser.add_argument('-cm', '--calculator', dest='calc',
+                        default=True, action="store_true",
+                        help='adds the Calculator Suite to the '
+                             'current run.')
 
     args = parser.parse_args()
-
-    print "Devices " + str(type(args.devices))
     dev_man = DeviceManager(args.devices[0])
-    dev_man.show_devices()
     log = Logger()
     if args.all_tests:
         tests = [CalculatorSuite, WiFiSettingsSuite, PhoneCallSuite]
