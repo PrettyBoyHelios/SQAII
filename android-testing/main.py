@@ -29,7 +29,7 @@ if __name__ == "__main__":
     log = Logger()
     if args.all_tests:
         tests = [CalculatorSuite, WiFiSettingsSuite, PhoneCallSuite]
-        tests = [CalculatorSuite]
+        # tests = [CalculatorSuite]
     else:
         tests = [PhoneCallSuite]
 

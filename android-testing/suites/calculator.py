@@ -23,7 +23,7 @@ class CalculatorSuite(Suite):
     def __generic_tc(self, tc_id):
         start_time = datetime.datetime.now()
         self.test_conditions()
-        print
+        print "Calculator Suite"
         array_operation, result, ex = self.__get_tc_data(tc_id)
         for element in array_operation:
             for digit in element:

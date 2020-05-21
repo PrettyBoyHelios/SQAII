@@ -117,7 +117,10 @@ class TestRun:
         tt = 0
 
         for i in self.tests:
+            tc_start = datetime.datetime.now()
             i.execute_suite()
+            tc_end = datetime.datetime.now()
+            print "Module took " + str(tc_end - tc_start)+ " seconds to complete."
 
             p, f, t = i.evaluate_module()
             tp += p

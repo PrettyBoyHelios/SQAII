@@ -6,6 +6,11 @@ SDET: *Luis Enrique Correa Morán*
 1. [Project Definition](#project-definition)
 2. [Scope](#scope)
 3. [Testing Levels](#testing-levels)
+4. [Test Strategy](#test-strategy)
+5. [Exit Criteria](#exit-criteria)
+6. [Risk Analysis](#risk-analysis)
+7. [Project Planning](#project-planning)
+
 ## Project Definition
 Android Testing Suite is a Software Development that aims to create an in-house testing suite for some of Android's most important modules.
 The testing suite is expected to guarantee the correct app behaviour for the Phone, Calculator and Settings apps. It is expected for the framework to be highly optimized, flexible and scalable to accommodate for a variety of different modules (or Apps) in the future.
@@ -34,6 +39,9 @@ much to generalize and create an optimized framework.
 ## Testing Levels
 This project will focus black box testing, evaluating only the outcome of a given process. The testing suite will provide both **system** and **regression** testing to the Android core app development. As the testing framework will provide a comprehensive way of testing the work of all the components of an app, and to guarantee the app's behaviour on every release.  
 
+## Test Strategy
+
+
 ## Exit Criteria
 For a release to be approved and deployed, the following conditions must be met.  
 * The targeted version must pass 97% of the planned test cases.
@@ -42,3 +50,6 @@ For a release to be approved and deployed, the following conditions must be met.
 * All changes have been documented and all reasonable Test Suites have been run to validate the current build.
 
 ## Risk Analysis
+
+## Project Planning
+
