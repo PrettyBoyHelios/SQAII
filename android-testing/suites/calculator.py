@@ -21,6 +21,10 @@ class CalculatorSuite(Suite):
             self.__generic_tc(test_case)
 
     def __generic_tc(self, tc_id):
+
+        """
+        Executes generic test case modules.
+        """
         start_time = datetime.datetime.now()
         self.test_conditions()
         print "Calculator Suite"

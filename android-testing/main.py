@@ -16,11 +16,19 @@ if __name__ == "__main__":
                         default=1,
                         help='number of devices to use.')
     parser.add_argument('-a', '--all', dest='all_tests',
-                        default=True, action="store_true",
+                        default=False, action="store_true",
                         help='adds all the available test suites to the '
                              'current run.')
     parser.add_argument('-cm', '--calculator', dest='calc',
-                        default=True, action="store_true",
+                        default=False, action="store_true",
+                        help='adds the Calculator Suite to the '
+                             'current run.')
+    parser.add_argument('-pm', '--phone', dest='phone',
+                        default=False, action="store_true",
+                        help='adds the Calculator Suite to the '
+                             'current run.')
+    parser.add_argument('-wm', '--wifi', dest='wifi',
+                        default=False, action="store_true",
                         help='adds the Calculator Suite to the '
                              'current run.')
 
@@ -31,7 +39,9 @@ if __name__ == "__main__":
         tests = [CalculatorSuite, WiFiSettingsSuite, PhoneCallSuite]
         # tests = [CalculatorSuite]
     else:
-        tests = [PhoneCallSuite]
+        if args.calc:
+            tests.append(PhoneCallSuite)
+
 
     suites = list()
     for device in dev_man.devices:

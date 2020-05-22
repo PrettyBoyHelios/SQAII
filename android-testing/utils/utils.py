@@ -63,8 +63,9 @@ class CalculatorUtils:
     def handle_advanced(device, res_id):
         # type: (Device, str) -> None
         """
-        Handles presence of advanced options. If they appear on screen, simply click on the desired button, if not,
-        swipe to open the advanced operations panel.
+        Handles presence of advanced options. If they appear on screen, simply
+        click on the desired button, if not, swipe to open the advanced
+        operations panel.
         :param device: device to perform the input in.
         :param res_id: resource id of the desired input button.
         :return:
@@ -81,6 +82,11 @@ class CalculatorUtils:
     @staticmethod
     def click_button(device, button):
         # type: (Device, str) -> None
+        """
+        Standard method for clicking a specified button.
+        :param device: the device onto which execute the button press.
+        :param button: the id identifier of the button to press.
+        """
         device(resourceId=button).click()
 
     @staticmethod
