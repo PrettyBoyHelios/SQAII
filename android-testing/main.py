@@ -25,11 +25,11 @@ if __name__ == "__main__":
                              'current run.')
     parser.add_argument('-pm', '--phone', dest='phone',
                         default=False, action="store_true",
-                        help='adds the Calculator Suite to the '
+                        help='adds the Phone Suite to the '
                              'current run.')
     parser.add_argument('-wm', '--wifi', dest='wifi',
                         default=False, action="store_true",
-                        help='adds the Calculator Suite to the '
+                        help='adds the WiFi Settings Suite to the '
                              'current run.')
 
     args = parser.parse_args()
@@ -40,8 +40,14 @@ if __name__ == "__main__":
         # tests = [CalculatorSuite]
     else:
         if args.calc:
+            print "Adding Calculator Module"
             tests.append(PhoneCallSuite)
-
+        if args.phone:
+            print "Adding Phone Module"
+            tests.append(PhoneCallSuite)
+        if args.wifi:
+            print "Adding WiFiSettings Module"
+            tests.append(PhoneCallSuite)
 
     suites = list()
     for device in dev_man.devices:

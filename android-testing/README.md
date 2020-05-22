@@ -19,9 +19,33 @@ source env/bin/activate
 ```bash
 pip install -r requirements.txt
 ```  
-4. Run main file  
+4. Run main file. This flags set the app to run for one device and all test suites.
 ```bash
-python main.py
+python main.py 1 -a
+```
+
+## Command Line Interface (CLI)
+To display CLI help, please use
+```shell script
+python main.py -h
+```
+
+That will display a message like the following.
+```shell script
+usage: main.py [-h] [-a] [-cm] [-pm] [-wm] devices
+
+Command line utility for managing Android Test Suite Testing Suites.
+
+positional arguments:
+  devices            number of devices to use.
+
+optional arguments:
+  -h, --help         show this help message and exit
+  -a, --all          adds all the available test suites to the current run.
+  -cm, --calculator  adds the Calculator Suite to the current run.
+  -pm, --phone       adds the Phone Suite to the current run.
+  -wm, --wifi        adds the WiFi Settings Suite to the current run.
+
 ```
 
 ## Project Structure

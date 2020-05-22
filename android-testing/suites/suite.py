@@ -127,9 +127,13 @@ class TestRun:
             tf += f
             tt += t
 
-        print "\nTest finished with {}% of its tests ({} out of {})" \
-            .format(float(tp) / float(tt) * 100.0,
-                    tp, tt)
+        if tt != 0:
+            print "\nTest finished with {}% of its tests ({} out of {})" \
+                .format(float(tp) / float(tt) * 100.0,
+                        tp, tt)
+        else:
+            print "\nSeems like no test cases were run. Please check your " \
+                  "configuration and try again. "
 
         end_time = datetime.datetime.now()
         print "TestRun took {} seconds to complete".format(end_time-start_time)
