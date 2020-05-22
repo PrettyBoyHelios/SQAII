@@ -17,9 +17,15 @@ class DeviceUnit:
         return self.serial
 
     def get_device(self):
+        """
+        Returns the device instance of a device.
+        """
         return self.device
 
     def get_serial(self):
+        """
+        Returns the serial string for a device.
+        """
         return self.serial
 
 
@@ -49,6 +55,9 @@ class DeviceManager:
             print "can't find desired device: " + str(e)
 
     def show_devices(self):
+        """
+        Lists the devices being actively managed.
+        """
         s = "Managing these devices:\n"
         for device in self.devices:
             s += "\n" + str(device)
