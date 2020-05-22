@@ -27,7 +27,7 @@ class CalculatorSuite(Suite):
         """
         start_time = datetime.datetime.now()
         self.test_conditions()
-        print "Calculator Suite"
+        print self.module + " Executing TC: " + tc_id + " on " + self.serial
         array_operation, result, ex = self.__get_tc_data(tc_id)
         for element in array_operation:
             for digit in element:

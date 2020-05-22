@@ -48,7 +48,8 @@ class Suite:
         try:
             print "Module {} has passed {}% of its tests ({} out of {})" \
                 .format(self.module,
-                        float(self.passed_tests) / float(self.total_tests) * 100.0,
+                        float(self.passed_tests) / float(
+                            self.total_tests) * 100.0,
                         self.passed_tests, self.total_tests)
             return self.passed_tests, self.failed_tests, self.total_tests
         except Exception as e:
@@ -105,12 +106,16 @@ class TestRun:
         """
         self.tests.append(suite)
 
-    def execute_all_suites(self):
+    def execute_all_suites(self, n):
+        # type: (int) -> None
         """
         Executes all Test Suites in self.tests and prints a Test Run summary
         at the end of the execution.
         """
-        print "Will execute a total of " + str(len(self.tests)) + " suites."
+        if n != 0:
+            print "Will execute a total of " + str(
+                len(self.tests) / n) + "suites in " + str(
+                n) + " devices. (" + str(len(self.tests)) + " in total). "
         start_time = datetime.datetime.now()
         tp = 0
         tf = 0
@@ -120,7 +125,8 @@ class TestRun:
             tc_start = datetime.datetime.now()
             i.execute_suite()
             tc_end = datetime.datetime.now()
-            print "Module took " + str(tc_end - tc_start)+ " seconds to complete."
+            print "\nModule took " + str(tc_end - tc_start) + "seconds to " \
+                                                              "complete. "
 
             p, f, t = i.evaluate_module()
             tp += p
@@ -136,4 +142,5 @@ class TestRun:
                   "configuration and try again. "
 
         end_time = datetime.datetime.now()
-        print "TestRun took {} seconds to complete".format(end_time-start_time)
+        print "TestRun took {} seconds to complete".format(
+            end_time - start_time)

@@ -43,6 +43,8 @@ class DeviceManager:
                 except Exception as e:
                     print "Could not add device because: " + str(e)
                     continue
+            print "\nAdded a total of " + str(len(self.devices)) + " devices" \
+                                                                   ".\n "
         except Exception as e:
             print "can't find desired device: " + str(e)
 

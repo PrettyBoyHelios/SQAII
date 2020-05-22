@@ -1,3 +1,4 @@
+# coding=utf-8
 from models.manager import DeviceManager
 from suites.calculator import CalculatorSuite
 from suites.phonecall import PhoneCallSuite
@@ -41,13 +42,19 @@ if __name__ == "__main__":
     else:
         if args.calc:
             print "Adding Calculator Module"
-            tests.append(PhoneCallSuite)
+            tests.append(CalculatorSuite)
         if args.phone:
             print "Adding Phone Module"
             tests.append(PhoneCallSuite)
         if args.wifi:
             print "Adding WiFiSettings Module"
-            tests.append(PhoneCallSuite)
+            tests.append(WiFiSettingsSuite)
+
+    msg = "\n|-----------|\n| " + str(len(tests)) + "         |\n| TEST      |\n| " \
+                                                  "SUITES    |\n| ADDED     " \
+                                                  "|\n|-----------|\n(\__/) " \
+                                                  "||\n(•ㅅ•) ||\n/ 　 づ\n"
+    print msg
 
     suites = list()
     for device in dev_man.devices:
@@ -57,4 +64,4 @@ if __name__ == "__main__":
     test = TestRun()
     for suite in suites:
         test.add_suite(suite)
-    test.execute_all_suites()
+    test.execute_all_suites(len(dev_man.devices))

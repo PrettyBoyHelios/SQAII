@@ -64,7 +64,7 @@ class PhoneCallSuite(Suite):
             test_case = self.__get_tc(tc)
             start_time = datetime.datetime.now()
             self.test_conditions()
-            print self.module + " Executing TC: " + tc
+            print self.module + " Executing TC: " + tc + " on " + self.serial
             try:
                 number = test_case['phone']
                 number = PhoneUtils.process_phone_number(number)
