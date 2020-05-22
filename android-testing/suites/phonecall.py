@@ -85,6 +85,7 @@ class PhoneCallSuite(Suite):
         """
         Utils.start_home(self.serial)
         AppUtils.kill_app(self.serial, self.package)
+        AppUtils.kill_app(self.serial, "com.android.dialer")
         AppUtils.open_app(self.device, self.serial, self.app)
         Utils.wait_short()
 
