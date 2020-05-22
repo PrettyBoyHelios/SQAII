@@ -120,6 +120,34 @@ After running the testing suite, the application's output was the following, req
 |ZY224QWRPJ      | 23:30:24| 23:30:28| 0:00:04.519657| WiFi Settings| WFS_002 | PASSED|     |      |
 |ZY224QWRPJ      | 23:30:28| 23:30:34| 0:00:05.612243| WiFi Settings| WFS_003 | PASSED|     |      |
 |ZY224QWRPJ      | 23:30:34| 23:30:37| 0:00:03.432732| WiFi Settings| WFS_004 | PASSED|     |      |
+
+### Patch Hotfix
+It was required to rerun the PhoneCall Suite to guarantee the Android v8.0 patch did not affect the upper versions.  
+
+|ID        |Start    |End      |Duration       |Module    |Test Case|Status |Error|FIELD9|
+|----------|---------|---------|---------------|----------|---------|-------|-----|------|
+|ZY224QWRPJ| 16:35:39| 16:35:52| 0:00:13.362561| PhoneCall| PCS_001 | PASSED|     |      |
+|ZY224QWRPJ| 16:35:52| 16:36:08| 0:00:15.667583| PhoneCall| PCS_002 | PASSED|     |      |
+|ZY224QWRPJ| 16:36:08| 16:36:18| 0:00:10.244336| PhoneCall| PCS_003 | PASSED|     |      |
+|ZY224QWRPJ| 16:36:18| 16:36:27| 0:00:09.098187| PhoneCall| PCS_004 | PASSED|     |      |
+|ZY224QWRPJ| 16:39:05| 16:39:18| 0:00:13.661432| PhoneCall| PCS_001 | PASSED|     |      |
+|ZY224QWRPJ| 16:39:18| 16:39:34| 0:00:15.596672| PhoneCall| PCS_002 | PASSED|     |      |
+|ZY224QWRPJ| 16:39:34| 16:39:51| 0:00:17.372823| PhoneCall| PCS_003 | PASSED|     |      |
+|ZY224QWRPJ| 16:39:51| 16:40:14| 0:00:22.752194| PhoneCall| PCS_004 | PASSED|     |      |
+|ZY224QWRPJ| 16:40:14| 16:40:23| 0:00:09.033693| PhoneCall| PCS_005 | PASSED|     |      |
+|ZY224QWRPJ| 16:40:23| 16:40:43| 0:00:20.257635| PhoneCall| PCS_006 | PASSED|     |      |
+|ZY224QWRPJ| 16:40:43| 16:40:57| 0:00:13.668630| PhoneCall| PCS_007 | PASSED|     |      |
+|ZY224QWRPJ| 16:40:57| 16:41:09| 0:00:11.704671| PhoneCall| PCS_008 | PASSED|     |      |
+|ZY326PJVC9| 16:42:02| 16:42:16| 0:00:14.342887| PhoneCall| PCS_001 | PASSED|     |      |
+|ZY326PJVC9| 16:42:16| 16:42:31| 0:00:14.894673| PhoneCall| PCS_002 | PASSED|     |      |
+|ZY326PJVC9| 16:44:49| 16:45:03| 0:00:14.003704| PhoneCall| PCS_001 | PASSED|     |      |
+|ZY326PJVC9| 16:45:03| 16:45:18| 0:00:14.598516| PhoneCall| PCS_002 | PASSED|     |      |
+|ZY326PJVC9| 16:45:18| 16:45:39| 0:00:20.879993| PhoneCall| PCS_003 | PASSED|     |      |
+|ZY326PJVC9| 16:45:39| 16:46:03| 0:00:23.629588| PhoneCall| PCS_004 | PASSED|     |      |
+|ZY326PJVC9| 16:46:03| 16:46:11| 0:00:08.328291| PhoneCall| PCS_005 | PASSED|     |      |
+|ZY326PJVC9| 16:46:11| 16:46:32| 0:00:21.350760| PhoneCall| PCS_006 | PASSED|     |      |
+|ZY326PJVC9| 16:46:32| 16:46:47| 0:00:14.665863| PhoneCall| PCS_007 | PASSED|     |      |
+|ZY326PJVC9| 16:46:47| 16:46:57| 0:00:09.647160| PhoneCall| PCS_008 | PASSED|     |      |
 ## Test Suites Summary
 The summary for all test cases ran for the test suite is presented below. To get further information please go to the [Test Suite Description](https://docs.google.com/spreadsheets/d/1lIVIKKK4zOptjwTfsbyr2IaPt4KSgWGRoI6NxgrZMW0/edit?usp=sharing) and the [Traceability Matrix](https://docs.google.com/spreadsheets/d/1ImSk6ZnVjv0hb979DL8E2sTEJRABI6YCLwi3vEQBZWg/edit?usp=sharing).
 ![Summary](img/summary_v12.png)
