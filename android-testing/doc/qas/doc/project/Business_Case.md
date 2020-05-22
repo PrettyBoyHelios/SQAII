@@ -100,5 +100,5 @@ The following key benefits have been identified.
 * Focus from manpower can shift into other important stages of the testing process, such as RCA, Test Design, Bug Fixing.
 
 ### 6.1 Disadvantages
-Maintenance of the framework will require qualified testers & developers.
-Further development is required to create an adequate GUI for management and other areas.
+* Maintenance of the framework will require qualified testers & developers.
+* Further development is required to create an adequate GUI for management and other areas.
