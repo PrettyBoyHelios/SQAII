@@ -11,3 +11,5 @@ android-testing/.idea/vcs.xml
 .idea/vcs.xml
 android-testing/data/phone.json
 android-testing/data/phone.json
+android-testing/.vscode/settings.json
+android-testing/.idea/codeStyles/codeStyleConfig.xml
