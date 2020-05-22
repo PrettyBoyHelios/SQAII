@@ -72,5 +72,7 @@ All contributions to this repository must be through the creation of Pull Reques
 The testing framework generates csv files, separated by date under the log/ folder. Application reports are stored under the CSV format so that test results can be easily imported into Microsoft Excel or any other spreadsheet software.
 
 ## External Files
-* [Android Testing Suite Latest Release Notes](https://github.com/PrettyBoyHelios/SQAII/blob/master/android-testing/release_notes/Release%20Notes%20v1.0.md)
-* [Google Drive Documentation (Test Cases & Traceability Matrix)](https://drive.google.com/open?id=1pelShQtyow9NMS0PA6iN6ZUeSb7uAv8X)
+* [Android Testing Suite Latest Release Notes](https://github.com/PrettyBoyHelios/SQAII/blob/master/android-testing/release_notes/Release%20Notes%20v1.2.md)
+* [Google Drive Documentation (Test Cases & Traceability Matrix)](https://drive.google.com/drive/folders/1iij0ddN_N99NNRBnsqKfay7adcM2r8BP?usp=sharing)
+* [Test Plan](doc/qas/doc/project/Test_Plan.md)
+* [Business Case](doc/qas/doc/project/Business_Case.md)

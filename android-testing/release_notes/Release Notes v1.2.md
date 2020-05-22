@@ -121,7 +121,7 @@ After running the testing suite, the application's output was the following, req
 |ZY224QWRPJ      | 23:30:28| 23:30:34| 0:00:05.612243| WiFi Settings| WFS_003 | PASSED|     |      |
 |ZY224QWRPJ      | 23:30:34| 23:30:37| 0:00:03.432732| WiFi Settings| WFS_004 | PASSED|     |      |
 ## Test Suites Summary
-The summary for all test cases ran for the test suite is presented below. To get further information please go to the [Test Suite Description](https://docs.google.com/spreadsheets/d/13U0UXEtuSqAp-kqhkFW-uvMW_utKNBC43l2fw9tXQbw/edit#gid=0) and the [Traceability Matrix](https://docs.google.com/spreadsheets/d/12QFADBlV2T41ou9senq9e25IrHtyodsENkYXOv9_WGg/edit#gid=0).
+The summary for all test cases ran for the test suite is presented below. To get further information please go to the [Test Suite Description](https://docs.google.com/spreadsheets/d/1lIVIKKK4zOptjwTfsbyr2IaPt4KSgWGRoI6NxgrZMW0/edit?usp=sharing) and the [Traceability Matrix](https://docs.google.com/spreadsheets/d/1ImSk6ZnVjv0hb979DL8E2sTEJRABI6YCLwi3vEQBZWg/edit?usp=sharing).
 ![Summary](img/summary_v11.png)
 
 ## Bug Reports
