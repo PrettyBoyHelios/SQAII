@@ -147,17 +147,29 @@ class PhoneUtils:
                  ])
             Utils.wait_normal()
         else:
-            device(
-                resourceId="com.google.android.dialer:id/fab") \
-                .click()
-            for digit in number:
-                PhoneUtils.click_dial_number(device, digit)
-                # Utils.wait_short()
-            device(
-                resourceId="com.google.android.dialer:id"
-                           "/dialpad_voice_call_button") \
-                .click()
-            Utils.wait_normal()
+            if device(resourceId="com.google.android.dialer:id/fab").exists:
+                device(
+                    resourceId="com.google.android.dialer:id/fab") \
+                    .click()
+                for digit in number:
+                    PhoneUtils.click_dial_number(device, digit)
+                    # Utils.wait_short()
+                device(
+                    resourceId="com.google.android.dialer:id"
+                               "/dialpad_voice_call_button") \
+                    .click()
+                Utils.wait_normal()
+            elif device(resourceId="com.android.dialer:id/floating_action_button").exists:
+                device(resourceId="com.android.dialer:id/floating_action_button").click()
+                for digit in number:
+                    PhoneUtils.click_dial_number_27(device, digit)
+                device(
+                    resourceId="com.android.dialer:id/dialpad_floating_action_button",
+                    className="android.widget.ImageButton"
+                ).click()
+                Utils.wait_normal()
+            else:
+                print "could not find keypad button"
 
     @staticmethod
     def click_dial_number(device, digit):
@@ -189,6 +201,34 @@ class PhoneUtils:
                 .click()
 
     @staticmethod
+    def click_dial_number_27(device, digit):
+        # type: (Device, str) -> None
+        """
+        Exclusive to UIAutomator, function clicks the desired digit in a
+        specified device that uses Android API below 27.
+        """
+        if digit == '+':
+            device(
+                text='0', resourceId="com.android.dialer:id/dialpad_key_number") \
+                .long_click()
+        elif digit == '#':
+            device(
+                text="#",
+                className="android.widget.TextView",
+                resourceId="com.android.dialer:id/dialpad_key_number") \
+                .click()
+        elif digit == '*':
+            device(
+                text="*",
+                className="android.widget.TextView",
+                resourceId="com.android.dialer:id/dialpad_key_number") \
+                .click()
+        else:
+            device(
+                text=digit,
+                resourceId="com.android.dialer:id/dialpad_key_number").click()
+
+    @staticmethod
     def end_call(device, use_adb=False):
         # type: (Device, bool) -> (bool, Exception)
         """
@@ -217,14 +257,23 @@ class PhoneUtils:
                            className="android.widget.Button") \
                         .click()
                     raise CallFailed("network not available")
+                elif device(text="OK",
+                            resourceId="android:id/button1").exists:
+                    device(text="OK",
+                           resourceId="android:id/button1").click()
+                    raise CallFailed("feature not available")
                 elif device(text="OK") \
                         .exists:
                     device(text="OK").click()
                     raise CallFailed("option not available")
                 else:
-                    device(
-                        resourceId="com.google.android.dialer:id"
-                                   "/incall_end_call").click()
+                    if device(resourceId="com.google.android.dialer:id"
+                                         "/incall_end_call").exists:
+                        device(
+                            resourceId="com.google.android.dialer:id"
+                                       "/incall_end_call").click()
+                    if device(resourceId="com.android.dialer:id/incall_end_call").exists:
+                        device(resourceId="com.android.dialer:id/incall_end_call").click()
                 Utils.wait_short()
                 return True, None
             except Exception as e:

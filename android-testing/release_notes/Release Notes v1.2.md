@@ -125,7 +125,7 @@ The summary for all test cases ran for the test suite is presented below. To get
 ![Summary](img/summary_v12.png)
 
 ## Bug Reports
-There were no bugs reported in the last testing round.
+There was only one bug reported for this release TSB_001, which was patched before release and testing for the affected module (Phone Module) was carried out successfully.
 
 ## Action Plan
 Proceeding to deploy the v1.2 of the Android Testing Suite. Carried bugs from previous versions have been now solved.

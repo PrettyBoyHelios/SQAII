@@ -10,7 +10,7 @@
         "adb": false
     },
     "PCS_003": {
-        "phone": "8256012#",
+        "phone": "8256012",
         "expected": true,
         "adb": false
     },
