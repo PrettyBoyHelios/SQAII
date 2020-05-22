@@ -92,3 +92,13 @@ With the framework running twice a day, and estimating a number of 15 devices to
 ![ROI](img/roi.png)
 
 ## 6.0 Project Benefits
+The following key benefits have been identified.
+* Scalability in terms of testing throughput, it is easier to create more server instances of the that run the framework than increasing the size of the human team.
+* Testing team will be able of focusing on more challenging and fulfilling tasks rather than repetitive ones.
+* Automatic error reporting and lack of human error in reports and test logs.
+* Framework is able of running continuously, even more than two times a day.
+* Focus from manpower can shift into other important stages of the testing process, such as RCA, Test Design, Bug Fixing.
+
+### 6.1 Disadvantages
+Maintenance of the framework will require qualified testers & developers.
+Further development is required to create an adequate GUI for management and other areas.
