@@ -208,9 +208,8 @@ class PhoneUtils:
         specified device that uses Android API below 27.
         """
         if digit == '+':
-            device(
-                text='0', resourceId="com.android.dialer:id/dialpad_key_number") \
-                .long_click()
+            device(text='0', resourceId="com.android.dialer:id"
+                                        "/dialpad_key_number").long_click()
         elif digit == '#':
             device(
                 text="#",
@@ -272,8 +271,10 @@ class PhoneUtils:
                         device(
                             resourceId="com.google.android.dialer:id"
                                        "/incall_end_call").click()
-                    if device(resourceId="com.android.dialer:id/incall_end_call").exists:
-                        device(resourceId="com.android.dialer:id/incall_end_call").click()
+                    if device(resourceId="com.android.dialer:id"
+                                         "/incall_end_call").exists:
+                        device(resourceId="com.android.dialer:id"
+                                          "/incall_end_call").click()
                 Utils.wait_short()
                 return True, None
             except Exception as e:
