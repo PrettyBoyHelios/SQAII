@@ -63,20 +63,26 @@ OpenSource libraries such as UIAutomator, ADB Shell and Python Open Source libra
 ![High LevelArquitecture](img/architecture_2.png)
 
 ## 4.0 Level of Effort
-|                          | F        | S        | S        | M        | T        | W        | T        | F        | S        |           |    |
-|--------------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|-----------|----|
-| Task Activity            | 15/05/20 | 16/05/20 | 17/05/20 | 18/05/20 | 19/05/20 | 20/05/20 | 21/05/20 | 22/05/20 | 23/05/20 | Time/Task |    |
-| Total Hours              | 3        | 6        | 5        | 3        | 3        | 4        | 3        |          |          | 27        |    |
-| Tool Analysis            | 3        | 1        |          |          |          |          |          | Demo     | Demo     | 4         | 17 |
-| Test Case Design         |          | 2        |          |          |          |          |          |          |          | 2         |    |
-| Library Development      |          | 3        | 1        |          |          |          |          |          |          | 4         |    |
-| PhoneCall Refactor       |          |          | 2        |          |          |          |          |          |          | 2         |    |
-| Test Case Implementation |          |          | 2        | 1        |          |          |          |          |          | 3         |    |
-| Test Execution & Fixes   |          |          |          | 2        |          |          |          |          |          | 2         |    |
-| Test Plan                |          |          |          |          | 3        |          |          |          |          | 3         |    |
-| Business Plan            |          |          |          |          |          | 2        |          |          |          | 2         |    |
-| Repo Final Update        |          |          |          |          |          | 2        | 1        |          |          | 3         |    |
-| Demo Rehearsal           |          |          |          |          |          |          | 2        |          |          | 2         |    |
+|                                   | Sprint 1 | Sprint 2 | Sprint 3 | Holidays |          | Sprint 4 | Sprint 5 | Sprint 8 | Summary   |      |
+|-----------------------------------|----------|----------|----------|----------|----------|----------|----------|----------|-----------|------|
+| Task Activity                     | 30/03/20 | 06/04/20 | 13/04/20 | 20/04/20 | 27/04/20 | 04/05/20 | 11/05/20 | 18/05/20 | Time/Task |      |
+| Total Hours                       | 4.5      | 4.5      | 3.5      | 0        | 0        | 3.32     | 0.5      | 2.5      | 18.82     |      |
+| Tool Installation & Reserach      | 3        | 2        |          |          |          |          |          |          | 5         | 12.5 |
+| Test Case Design                  | 1        | 1        |          |          |          |          |          |          | 2         |      |
+| Repo Initialization & Scaffolding | 0.5      | 0.5      |          |          |          |          |          |          | 1         |      |
+| Supporting Libraries v1.0         |          |          | 2        |          |          |          |          |          | 2         |      |
+| Test Case Implementation v1.0     |          |          | 0.5      |          |          |          |          |          | 0.5       |      |
+| Execution & Reporting             |          |          | 0.5      |          |          |          |          |          | 0.5       |      |
+| Documentation                     |          | 1        | 0.5      |          |          |          |          |          | 1.5       |      |
+| Refactor for Logging              |          |          |          |          |          | 1        |          |          | 1         | 3.32 |
+| Supporting Libraries v1.1         |          |          |          |          |          | 1        |          |          | 1         |      |
+| Test Case Design v1.1             |          |          |          |          |          | 0.5      |          |          | 0.5       |      |
+| Test Case Implementation v1.1     |          |          |          |          |          | 0.33     |          |          | 0.33      |      |
+| Execution & Reporting             |          |          |          |          |          | 0.16     |          |          | 0.16      |      |
+| Documentation                     |          |          |          |          |          | 0.33     |          |          | 0.33      |      |
+| Refactor Phone Test Cases         |          |          |          |          |          |          | 0.5      |          | 0.5       | 3    |
+| CLI                               |          |          |          |          |          |          |          | 0.5      | 0.5       |      |
+| Documentation                     |          |          |          |          |          |          |          | 2        | 2         |      |
 
 ## 5.0 Return of Investment
 
