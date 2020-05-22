@@ -50,14 +50,53 @@ At the same time, the following roles have been identified to be required for th
 | Lead Developer | To coordinate all development activities, and organizing all of them so that schedules are met. Review architectural design for the testing tools and prepare all needed environments for the Testing Suite to run over. |
 | Developers     | To develop the required tools and processes for testing throughout the project. All of this must be documented.                                                                                                          |
 
+### 4.1 Test Environment
+For the testing environment an inhouse server(s) is recommended, as physical access to devices is required. The hardware required is specified below.
+* An Intel-based system is required as AMD's recent Ryzen Platform has some issues with the libraries used for the project.
+* A Linux (Preferably Linux or Debian) or macOS system (a UNIX system) is recommended over a Windows server.
+* A machine with at least 8GM of RAM is recommended
+* Intel's 8th GEN or later processors recommended.
+* USB Extending devices, to maximize the amount of devices on each run.
+
 ## 5.0 Exit Criteria
 For a release to be approved and deployed, the following conditions must be met.  
 * The targeted version must pass 97% of the planned test cases.
 * All bugs in the released have been identified, analyzed and documented.
 * The Project's Lead Developer & Tester have agreed the found bugs do not represent a risk for the platforms overall functionality or credibility.
 * All changes have been documented and all reasonable Test Suites have been run to validate the current build.
+* Installation of Python 2.7 and virtualenv, as well as all the dependencies established in requirements.txt.
+
+### 5.1 For the Client Devices
+* English versions of the OS Installed.
+* Pure Android versions of Android (7.0-10.0).
+* Debugging over USB Activated & with screen power off disabled.
+* Settings, Calculator and Phone apps on the main device screen.
 
 ## 6.0 Risk Analysis
+The following risks and their respective mitigation strategies have been identified as likely hazards to the project.
+
+| Risk                                                                                                           | Likelihood | Impact | Mitigation                                                                                         |
+|----------------------------------------------------------------------------------------------------------------|------------|--------|----------------------------------------------------------------------------------------------------|
+| Reduced Personal for the Project                                                                               | 5          | 4      | Set realistic feature sets & times for product release.                                            |
+| Limited knowledge & proficiency on the tools chosen for the project                                            | 5          | 2      | Rely on more experienced members of the group that may be able of helping.                         |
+| SARS-COVID19 Pandemic                                                                                          | 5          | 1      | Replace communication methods for videoconferencing for meetings and advisory.                     |
+| Android Fragmentation causes for an unmanageable number of devices/ versions of the app to be tested properly. | 5          | 3      | Narrow down the Android versions & variants to create a Highly optimized version of the framework. |
+| Loss of Projects Documentation                                                                                 | 3          | 4      | Create automated reports of the testing and properly label every version of all documents.         |
 
 ## 7.0 Project Planning
 
+### 7.1 Project Deliveries
+| Activity  | Delivery Date | Start Date |
+|-----------|---------------|------------|
+| v1.0      | 30/03/2020    | 18/04/2020 |
+| v1.1      | 04/05/2020    | 11/05/2020 |
+| v1.2      | 11/05/2020    | 22/05/2020 |
+| Live Demo | 22/05/2020    | 23/05/2020 |
+
+### 7.2 Project Roles
+| Role                      | Assignee                  |
+|---------------------------|---------------------------|
+| Product Owner             | Juan de Dios Delgado      |
+| SDET                      | Luis Enrique Correa Morán |
+| Developer, LEAD Developer | Luis Enrique Correa Morán |
+| Tester                    | Luis Enrique Correa Morán |
