@@ -122,7 +122,7 @@ After running the testing suite, the application's output was the following, req
 |ZY224QWRPJ      | 23:30:34| 23:30:37| 0:00:03.432732| WiFi Settings| WFS_004 | PASSED|     |      |
 ## Test Suites Summary
 The summary for all test cases ran for the test suite is presented below. To get further information please go to the [Test Suite Description](https://docs.google.com/spreadsheets/d/1lIVIKKK4zOptjwTfsbyr2IaPt4KSgWGRoI6NxgrZMW0/edit?usp=sharing) and the [Traceability Matrix](https://docs.google.com/spreadsheets/d/1ImSk6ZnVjv0hb979DL8E2sTEJRABI6YCLwi3vEQBZWg/edit?usp=sharing).
-![Summary](img/summary_v11.png)
+![Summary](img/summary_v12.png)
 
 ## Bug Reports
 There were no bugs reported in the last testing round.
