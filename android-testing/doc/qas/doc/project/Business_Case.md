@@ -3,14 +3,14 @@ May 20th, 2020
 SDET: *Luis Enrique Correa Morán*
 
 ## Table of Contents
-1. [Scope](#scope)
-3. [Approach](#approach-architecture)
-4. [Architecture & Process](#high-level-architecture--process)
-5. [Exit Criteria](#exit-criteria)
-6. [Risk Analysis](#risk-analysis)
-7. [Project Planning](#project-planning)
+1. [Scope](#10-scope)
+2. [Approach](#20-approach-architecture)
+3. [High Level Architecture & Process](#30-high-level-architecture--process)
+4. [Level of Effort](#40-level-of-effort)
+5. [Return of Investment](#50-return-of-investment)
+6. [Project Benefits](#60-project-benefits)
 
-## Scope
+## 1.0 Scope
 The framework to be developed must cover the following requirements.
 * Ability to test the correct functionality for the following Android Modules.
     * Phone App
@@ -40,10 +40,10 @@ Popular brands that follow this Software trend are described below, important to
 * Some models of ASUS Zenphone
 * PocoPhone Series
 
-## Reliability Test
+### 1.1 Reliability Test
 The test aims to achieve reliability by reproducing consistent test cases (independent of Android version) among multiple devices. As well as having assertions on conditions that prove that the ultimate goal of a given test case is fulfilled.
 
-## Framework Mechanism
+### 1.2 Framework Mechanism
 * SDK: E2E UI Workflow, that carries out human-like procedures on apps by simulating human interaction.
 * GUI: Script Oriented and CLI tools available for the framework utilization.
 * Log & Autoreporting: the framework will be able of generating the same logs a manual tester would and generate a csv report of them.
@@ -52,11 +52,18 @@ The test aims to achieve reliability by reproducing consistent test cases (indep
 * Scalability for Devices: the framework won't run on simultaneous devices, but is able to add multiple devices on a run, so that tests on a device are executed right after the previous device finishes.
 * Flexibility: Adiition of new test cases ir really easy, as well as new test assertions. Suites usually require a time consuming supporting library to be created, but test Suite addition is usually easy and fast.
 
-## Approach Architecture
+## 2.0 Approach Architecture
 The platform will be built on top of the Android Platform, over which the language python will be the base for developing any script or supporting library the framework requires.
 Auxiliary formats like JSON and CSV will be used so that the framework is able of interacting with human readable elements for test input and output.
 
 OpenSource libraries such as UIAutomator, ADB Shell and Python Open Source libraries will be used to create Supporting Libraries that will contain useful and repetitive tasks used by Testing Suites, that perform testing over an Android Module or App.
 ![Architecture](img/architecture.png)
 
-## High Level Architecture & Process
+## 3.0 High Level Architecture & Process
+![High LevelArquitecture](img/architecture_2.png)
+
+## 4.0 Level of Effort
+
+## 5.0 Return of Investment
+
+## 6.0 Project Benefits
