@@ -63,8 +63,9 @@ class CalculatorUtils:
     def handle_advanced(device, res_id):
         # type: (Device, str) -> None
         """
-        Handles presence of advanced options. If they appear on screen, simply click on the desired button, if not,
-        swipe to open the advanced operations panel.
+        Handles presence of advanced options. If they appear on screen, simply
+        click on the desired button, if not, swipe to open the advanced
+        operations panel.
         :param device: device to perform the input in.
         :param res_id: resource id of the desired input button.
         :return:
@@ -81,22 +82,38 @@ class CalculatorUtils:
     @staticmethod
     def click_button(device, button):
         # type: (Device, str) -> None
+        """
+        Standard method for clicking a specified button.
+        :param device: the device onto which execute the button press.
+        :param button: the id identifier of the button to press.
+        """
         device(resourceId=button).click()
 
     @staticmethod
-    def get_result(device):
-        # type: (Device) -> str
+    def get_result(device, expected):
+        # type: (Device, bool) -> str
         """
-        Retrieves the calculator's result and replaces unicode characters that do not match.
+        Retrieves the calculator's result and replaces unicode characters that
+        do not match.
         :param device: device: device to perform the input in.
+        :param expected: boolean describing if the expression is expected to
+        return a value.
         :return: string with the result's content.
         """
-        device(resourceId="com.google.android.calculator:id/eq").click()
-        res = device(
-            resourceId="com.google.android.calculator:id/result_final") \
-            .info['text']
-        res = res.replace(u'\u2212', '-')
-        return res
+        if expected:
+            device(resourceId="com.google.android.calculator:id/eq").click()
+            res = device(
+                resourceId="com.google.android.calculator:id/result_final") \
+                .info['text']
+            res = res.replace(u'\u2212', '-')
+            return res
+        else:
+            device(resourceId="com.google.android.calculator:id/eq").click()
+            res = device(
+                resourceId="com.google.android.calculator:id/formula") \
+                .info['text']
+            res = res.replace(u'\u2212', '-')
+            return res
 
 
 class PhoneUtils:
@@ -123,7 +140,7 @@ class PhoneUtils:
         UIAutomator, using the specified device.
         """
         if use_adb:
-            check_call(
+            call(
                 ['adb', '-s', serial, 'shell', 'am', 'start',
                  '-a', 'android.intent.action.CALL', '-d',
                  'tel:' + str(number)
@@ -135,12 +152,12 @@ class PhoneUtils:
                 .click()
             for digit in number:
                 PhoneUtils.click_dial_number(device, digit)
-                Utils.wait_short()
+                # Utils.wait_short()
             device(
                 resourceId="com.google.android.dialer:id"
                            "/dialpad_voice_call_button") \
                 .click()
-            Utils.wait_normal(True)
+            Utils.wait_normal()
 
     @staticmethod
     def click_dial_number(device, digit):
@@ -200,11 +217,15 @@ class PhoneUtils:
                            className="android.widget.Button") \
                         .click()
                     raise CallFailed("network not available")
+                elif device(text="OK") \
+                        .exists:
+                    device(text="OK").click()
+                    raise CallFailed("option not available")
                 else:
                     device(
-                        resourceId="com.google.android.dialer:id/incall_end_call") \
-                        .click()
-                Utils.wait_normal()
+                        resourceId="com.google.android.dialer:id"
+                                   "/incall_end_call").click()
+                Utils.wait_short()
                 return True, None
             except Exception as e:
                 return False, e

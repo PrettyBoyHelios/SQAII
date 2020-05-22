@@ -22,6 +22,7 @@ class WiFiSettingsSuite(Suite):
     def wfs_001(self):
         start_time = datetime.now()
         current_test_case = "WFS_001"
+        print self.module + " Executing TC: " + current_test_case + " on " + self.serial
         status = WiFiUtils.switch_wifi(self.device, False)
         if not status:
             WiFiUtils.switch_wifi(self.device, True)
@@ -34,6 +35,7 @@ class WiFiSettingsSuite(Suite):
     def wfs_002(self):
         start_time = datetime.now()
         current_test_case = "WFS_002"
+        print self.module + " Executing TC: " + current_test_case + " on " + self.serial
         status = WiFiUtils.check_wifi_status(self.device)
         if status:
             WiFiUtils.switch_wifi(self.device, True)
@@ -46,6 +48,7 @@ class WiFiSettingsSuite(Suite):
     def wfs_003(self):
         start_time = datetime.now()
         current_test_case = "WFS_003"
+        print self.module + " Executing TC: " + current_test_case + " on " + self.serial
         status = WiFiUtils.check_wifi_status(self.device)
         if status:
             status = WiFiUtils.switch_wifi(self.device, False)
@@ -57,6 +60,7 @@ class WiFiSettingsSuite(Suite):
     def wfs_004(self):
         start_time = datetime.now()
         current_test_case = "WFS_004"
+        print self.module + " Executing TC: " + current_test_case + " on " + self.serial
         status = WiFiUtils.check_wifi_status(self.device)
         if not status:
             status = WiFiUtils.switch_wifi(self.device, False)

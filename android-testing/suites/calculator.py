@@ -21,13 +21,18 @@ class CalculatorSuite(Suite):
             self.__generic_tc(test_case)
 
     def __generic_tc(self, tc_id):
+
+        """
+        Executes generic test case modules.
+        """
         start_time = datetime.datetime.now()
         self.test_conditions()
-        array_operation, result = self.__get_tc_data(tc_id)
+        print self.module + " Executing TC: " + tc_id + " on " + self.serial
+        array_operation, result, ex = self.__get_tc_data(tc_id)
         for element in array_operation:
             for digit in element:
                 CalculatorUtils.input_digit(self.device, digit)
-        actual_result = CalculatorUtils.get_result(self.device)
+        actual_result = CalculatorUtils.get_result(self.device, ex)
         self.__compare_results(result, actual_result, tc_id, start_time)
 
     def __preprocess_test_cases(self):
@@ -40,7 +45,7 @@ class CalculatorSuite(Suite):
         self.test_cases = test_cases
 
     def __get_tc_data(self, tc):
-        # type: (str) -> ([str], str)
+        # type: (str) -> ([str], str, bool)
         """
         Retrieves the test case data for the specified test case id. Returns
         operation and results.
@@ -48,14 +53,15 @@ class CalculatorSuite(Suite):
         op = self.__read_test_case(tc)
         array_operation = op['operation']
         result = op['result']
-        return array_operation, result
+        ex = op['expected']
+        return array_operation, result, ex
 
     def __compare_results(self, expected, result, test_case, time):
         # type: (str, str, str, datetime.datetime) -> None
         """
         Compares results and determines log and test output.
         """
-        if expected == result:
+        if expected in result:
             self.pass_test(test_case, time)
         else:
             self.fail_test(test_case, time,

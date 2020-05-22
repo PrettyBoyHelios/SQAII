@@ -19,9 +19,33 @@ source env/bin/activate
 ```bash
 pip install -r requirements.txt
 ```  
-4. Run main file  
+4. Run main file. This flags set the app to run for one device and all test suites.
 ```bash
-python main.py
+python main.py 1 -a
+```
+
+## Command Line Interface (CLI)
+To display CLI help, please use
+```shell script
+python main.py -h
+```
+
+That will display a message like the following.
+```shell script
+usage: main.py [-h] [-a] [-cm] [-pm] [-wm] devices
+
+Command line utility for managing Android Test Suite Testing Suites.
+
+positional arguments:
+  devices            number of devices to use.
+
+optional arguments:
+  -h, --help         show this help message and exit
+  -a, --all          adds all the available test suites to the current run.
+  -cm, --calculator  adds the Calculator Suite to the current run.
+  -pm, --phone       adds the Phone Suite to the current run.
+  -wm, --wifi        adds the WiFi Settings Suite to the current run.
+
 ```
 
 ## Project Structure
@@ -48,5 +72,7 @@ All contributions to this repository must be through the creation of Pull Reques
 The testing framework generates csv files, separated by date under the log/ folder. Application reports are stored under the CSV format so that test results can be easily imported into Microsoft Excel or any other spreadsheet software.
 
 ## External Files
-* [Android Testing Suite Latest Release Notes](https://github.com/PrettyBoyHelios/SQAII/blob/master/android-testing/release_notes/Release%20Notes%20v1.0.md)
-* [Google Drive Documentation (Test Cases & Traceability Matrix)](https://drive.google.com/open?id=1pelShQtyow9NMS0PA6iN6ZUeSb7uAv8X)
+* [Android Testing Suite Latest Release Notes](https://github.com/PrettyBoyHelios/SQAII/blob/master/android-testing/release_notes/Release%20Notes%20v1.2.md)
+* [Google Drive Documentation (Test Cases & Traceability Matrix)](https://drive.google.com/drive/folders/1iij0ddN_N99NNRBnsqKfay7adcM2r8BP?usp=sharing)
+* [Test Plan](doc/qas/doc/project/Test_Plan.md)
+* [Business Case](doc/qas/doc/project/Business_Case.md)

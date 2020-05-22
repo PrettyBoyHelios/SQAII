@@ -87,7 +87,7 @@ The summary for all test cases ran for the test suite is presented below. To get
 ## Bug Reports
 The following bugs have been reported from testing round.
 
-* CALB_001: Framework fails to validate calculator results for irrational numbers that have no finite representation of themselves.
+* [CALB_001](https://github.com/PrettyBoyHelios/SQAII/issues/5): Framework fails to validate calculator results for irrational numbers that have no finite representation of themselves.
 
 ## Action Plan
 Proceeding to deploy the v1.1 of the Android Testing Suite. Fixing all major bugs before the next release.
