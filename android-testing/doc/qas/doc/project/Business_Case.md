@@ -63,6 +63,9 @@ OpenSource libraries such as UIAutomator, ADB Shell and Python Open Source libra
 ![High LevelArquitecture](img/architecture_2.png)
 
 ## 4.0 Level of Effort
+This table details the effort spent on every sprint for the project in terms of hours spent by the whole development team. From testers to developers, according to the proper activities of each task.  
+A [spreadsheet version](Level%20of%20Effort.numbers) of this table is also available.
+
 |                                   | Sprint 1 | Sprint 2 | Sprint 3 | Holidays |          | Sprint 4 | Sprint 5 | Sprint 8 | Summary   |      |
 |-----------------------------------|----------|----------|----------|----------|----------|----------|----------|----------|-----------|------|
 | Task Activity                     | 30/03/20 | 06/04/20 | 13/04/20 | 20/04/20 | 27/04/20 | 04/05/20 | 11/05/20 | 18/05/20 | Time/Task |      |
@@ -85,5 +88,7 @@ OpenSource libraries such as UIAutomator, ADB Shell and Python Open Source libra
 | Documentation                     |          |          |          |          |          |          |          | 2        | 2         |      |
 
 ## 5.0 Return of Investment
+With the framework running twice a day, and estimating a number of 15 devices to run the tests on, the Return of Investment is expected to be reached between de 8th and 9th days of running. The model can bee located in the following [numbers spreadsheet](Time%20for%20Running%20Test%20Suites.numbers) (requires numbers for macOS).
+![ROI](img/roi.png)
 
 ## 6.0 Project Benefits
