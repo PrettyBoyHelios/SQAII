@@ -18,7 +18,7 @@ The framework to be developed must cover the following requirements.
     * Android
     
 Android versions to be contained in the development process are defined below.
-* Android 7 Nougat
+* Android 7.0 Nougat
 * Android 8.0 Oreo
 * Android 9.0 Pie
 * Android 10.0 Q
@@ -46,11 +46,11 @@ The test aims to achieve reliability by reproducing consistent test cases (indep
 ### 1.2 Framework Mechanism
 * SDK: E2E UI Workflow, that carries out human-like procedures on apps by simulating human interaction.
 * GUI: Script Oriented and CLI tools available for the framework utilization.
-* Log & Autoreporting: the framework will be able of generating the same logs a manual tester would and generate a csv report of them.
+* Log & Auto Reporting: the framework will be able of generating the same logs a manual tester would and generate a csv report of them.
 * History Reporting System: an historical archive of test runs will be created.
-* Test Scheduler: the frameork is meant to be run at least once every day, though if multiple builds are generated in a day, it is possible to run them multiple times.
+* Test Scheduler: the framework is meant to be run at least once every day, though if multiple builds are generated in a day, it is possible to run them multiple times.
 * Scalability for Devices: the framework won't run on simultaneous devices, but is able to add multiple devices on a run, so that tests on a device are executed right after the previous device finishes.
-* Flexibility: Adiition of new test cases ir really easy, as well as new test assertions. Suites usually require a time consuming supporting library to be created, but test Suite addition is usually easy and fast.
+* Flexibility: Addition of new test cases ir really easy, as well as new test assertions. Suites usually require a time consuming supporting library to be created, but test Suite addition is usually easy and fast.
 
 ## 2.0 Approach Architecture
 The platform will be built on top of the Android Platform, over which the language python will be the base for developing any script or supporting library the framework requires.
@@ -59,8 +59,11 @@ Auxiliary formats like JSON and CSV will be used so that the framework is able o
 OpenSource libraries such as UIAutomator, ADB Shell and Python Open Source libraries will be used to create Supporting Libraries that will contain useful and repetitive tasks used by Testing Suites, that perform testing over an Android Module or App.
 ![Architecture](img/architecture.png)
 
+Server is meant to be run inside a local network, through command line ssh. The CLI makes it easier to develop a WebApp that interfaces with it, so that management is made easier for non experienced users.
+![Server architechture](img/servers.png)
+
 ## 3.0 High Level Architecture & Process
-![High LevelArquitecture](img/architecture_2.png)
+![High Level Arquitecture](img/architecture_2.png)
 
 ## 4.0 Level of Effort
 This table details the effort spent on every sprint for the project in terms of hours spent by the whole development team. From testers to developers, according to the proper activities of each task.  
@@ -70,7 +73,7 @@ A [spreadsheet version](Level%20of%20Effort.numbers) of this table is also avail
 |-----------------------------------|----------|----------|----------|----------|----------|----------|----------|----------|-----------|------|
 | Task Activity                     | 30/03/20 | 06/04/20 | 13/04/20 | 20/04/20 | 27/04/20 | 04/05/20 | 11/05/20 | 18/05/20 | Time/Task |      |
 | Total Hours                       | 4.5      | 4.5      | 3.5      | 0        | 0        | 3.32     | 0.5      | 2.5      | 18.82     |      |
-| Tool Installation & Reserach      | 3        | 2        |          |          |          |          |          |          | 5         | 12.5 |
+| Tool Installation & Research      | 3        | 2        |          |          |          |          |          |          | 5         | 12.5 |
 | Test Case Design                  | 1        | 1        |          |          |          |          |          |          | 2         |      |
 | Repo Initialization & Scaffolding | 0.5      | 0.5      |          |          |          |          |          |          | 1         |      |
 | Supporting Libraries v1.0         |          |          | 2        |          |          |          |          |          | 2         |      |

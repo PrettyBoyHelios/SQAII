@@ -11,7 +11,7 @@ from utils.utils import Logger, Utils, AppUtils, CalculatorUtils
 class CalculatorSuite(Suite):
     def __init__(self, d, logger):
         # type: (DeviceManager, Logger) -> None
-        print "Initializing PhoneCall Component"
+        print "Initializing Calculator Component"
         Suite.__init__(self, d, logger, "Calculator", "Calculator",
                        "com.google.android.calculator")
 

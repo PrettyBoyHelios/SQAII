@@ -40,7 +40,7 @@ much to generalize and create an optimized framework.
 This project will focus black box testing, evaluating only the outcome of a given process. The testing suite will provide both **system** and **regression** testing to the Android core app development. As the testing framework will provide a comprehensive way of testing the work of all the components of an app, and to guarantee the app's behaviour on every release.  
 
 ## 4.0 Test Strategy
-The testing developed for this project will consist mainly on System Testing as well as Integration Testing, it is expected from the developers of Android Apps to perform the relevant Unit Testing before pushing new builds for testing.
+The testing developed for this project will consist mainly on System Testing as well as Integration Testing, it is expected from the developers of Android Apps to perform the relevant Unit Testing before pushing new builds for testing.  
 
 At the same time, the following roles have been identified to be required for the project.  
 | Role           | Responsibilities                                                                                                                                                                                                         |
