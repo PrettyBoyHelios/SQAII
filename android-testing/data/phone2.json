@@ -5,8 +5,8 @@
         "adb": true
     },
     "PCS_002": {
-        "phone": "*133#",
-        "expected": false,
+        "phone": "8121194",
+        "expected": true,
         "adb": false
     },
     "PCS_003": {
