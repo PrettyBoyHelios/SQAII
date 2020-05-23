@@ -18,7 +18,7 @@ The framework to be developed must cover the following requirements.
     * Android
     
 Android versions to be contained in the development process are defined below.
-* Android 7 Nougat
+* Android 7.0 Nougat
 * Android 8.0 Oreo
 * Android 9.0 Pie
 * Android 10.0 Q
@@ -58,6 +58,9 @@ Auxiliary formats like JSON and CSV will be used so that the framework is able o
 
 OpenSource libraries such as UIAutomator, ADB Shell and Python Open Source libraries will be used to create Supporting Libraries that will contain useful and repetitive tasks used by Testing Suites, that perform testing over an Android Module or App.
 ![Architecture](img/architecture.png)
+
+Server is meant to be run inside a local network, through command line ssh. The CLI makes it easier to develop a WebApp that interfaces with it, so that management is made easier for non experienced users.
+![Server architechture](img/servers.png)
 
 ## 3.0 High Level Architecture & Process
 ![High Level Arquitecture](img/architecture_2.png)
