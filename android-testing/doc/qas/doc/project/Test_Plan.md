@@ -43,6 +43,7 @@ This project will focus black box testing, evaluating only the outcome of a give
 The testing developed for this project will consist mainly on System Testing as well as Integration Testing, it is expected from the developers of Android Apps to perform the relevant Unit Testing before pushing new builds for testing.  
 
 At the same time, the following roles have been identified to be required for the project.  
+
 | Role           | Responsibilities                                                                                                                                                                                                         |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | SDET           | Review test documentation, and verify all of the testing activities performed help towards the testing objectives of the project.                                                                                        |

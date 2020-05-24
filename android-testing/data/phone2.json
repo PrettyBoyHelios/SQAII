@@ -1,14 +1,4 @@
 {
-    "PCS_001": {
-        "phone": "4448568081",
-        "expected": true,
-        "adb": true
-    },
-    "PCS_002": {
-        "phone": "8121194",
-        "expected": true,
-        "adb": false
-    },
     "PCS_003": {
         "phone": "8256012",
         "expected": true,
@@ -19,24 +9,14 @@
         "expected": true,
         "adb": false
     },
-    "PCS_005": {
-        "phone": "+1 800 444 4444",
-        "expected": true,
-        "adb": true
-    },
     "PCS_006": {
         "phone": "+1 800 444 4444",
         "expected": true,
-        "adb": false
+        "adb": true
     },
     "PCS_007": {
         "phone": "911",
         "expected": true,
         "adb": false
-    },
-    "PCS_008": {
-        "phone": "911",
-        "expected": true,
-        "adb": true
     }
 }
